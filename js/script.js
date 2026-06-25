@@ -238,3 +238,21 @@ console.log(
 );
 
 console.log("Premium Website Developed by Web Buddy");
+// Contact form to WhatsApp
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const interest = document.getElementById("interest").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const text = `Hi FUNK CASUAL LUXURY,%0A%0AName: ${name}%0APhone: ${phone}%0AInterested In: ${interest}%0AMessage: ${message}`;
+
+    window.open(`https://wa.me/918770539841?text=${text}`, "_blank");
+  });
+}
